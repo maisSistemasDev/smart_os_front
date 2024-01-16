@@ -1,0 +1,17 @@
+.loginBox{
+    width: fit-content;
+    height: fit-content;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display:grid;
+    border-radius: 10px;
+    border: 1px solid rgb(158, 158, 158);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.loginBt{
+    margin: 1em;
+    justify-self: center;
+}
