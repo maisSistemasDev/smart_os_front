@@ -9,7 +9,7 @@ export default function LoginForm({onSubmit, title, loading}){
         <Title align="center" style={{color:"#0000007a"}}>{title || 'Login'}</Title>
         <TextInput label="E-mail" required/>
         <PasswordInput label="Senha" required/>
-        <Button type="submit" className={style.loginBt} loading>Entrar</Button>
+        <Button type="submit"  className={style.loginBt} loading={loading}>Entrar</Button>
         </div>
     )
     

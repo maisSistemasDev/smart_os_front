@@ -1,3 +1,4 @@
+"use client"; 
 import {GET, POST} from './handleRequests'
 import { config } from './config'
 
@@ -13,13 +14,13 @@ export const callLogin = async (email, password)=>{
     const response = await POST('api-auth/token', data, {"content-type":"application-json"})
     if(!response.error){
         const data = response.data
-        localStorage.setItem({'accessToken':data.token})
-        localStorage.setItem({'refreshToken':data.refresh_token})
+        window.localStorage.setItem({'accessToken':data.token})
+        window.localStorage.setItem({'refreshToken':data.refresh_token})
         return data
     }
 }
 
 
 
-const accessToken = localStorage.getItem('accessToken')
-const refreshToken = localStorage.getItem('refreshToken')
+const accessToken = ()=>window.localStorage.getItem('accessToken')
+const refreshToken = ()=>window.localStorage.getItem('refreshToken')

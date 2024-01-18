@@ -1,9 +1,11 @@
+"use client"; 
+
 import styles from './login.module.css';
 import LoginForm from '../components/LoginForm'
 import { SimpleGrid } from '@mantine/core';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { callLogin } from '../controllers/auth';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 export default function Login(){
 
     const router = useRouter()
